@@ -1,7 +1,7 @@
 /*
 PURCHASES CSS
 
-@author: NOM Prénom
+@author: Banor Olivier
 @version: 1.0
 @date: 2025-07-31
 @description: Code CSS pour la page des demandes d'achats.
@@ -19,10 +19,58 @@ PURCHASES CSS
 }
 
 body {
+    width: 1200px;
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;   /* Vous pouvez modifier la police */
-    background-color: var(--dark);   /* Vous pouvez changer la couleur de fond */
+    background-color: var(--crm-primary);   /* Vous pouvez changer la couleur de fond */
     color: var(--light);   /* Vous pouvez changer la couleur du texte */
 }
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--dark);
+}
+
+img {
+    margin-left: 20px;
+}
+
+fieldset{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+label, input {
+    flex-basis: 40%;
+    height: 20px;
+
+}
+
+button {
+
+    width: 20%;
+    height: 30px;
+    margin: 10px 150px 2px; 
+}
+
+footer{
+    width: 1200px;
+    max-width: 100%;
+    background-color: var(--dark);
+    text-align: justify;
+    text-justify: auto;
+}
+
+footer h2{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 

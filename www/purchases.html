@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demande d'achats</title>
-    <link rel="stylesheet" href="css/purchaise.css">
+    <link rel="stylesheet" href="./css/purchases.css">
+    <script src="./js/purchases.js" defer></script>
 </head>
 <body>
     <header class="title">
@@ -15,10 +16,51 @@
     <main>
 
         <form class="purchase">
+            <fieldset>
+                <legend>Information Client</legend>
 
+                <label for="nom">Nom: *</label>
+                <input type="text" id="nom" required placeholder="Nom de famille" name="nom" title="Inscrit ton nom">
+                <label for="prenom">Prenom: *</label>
+                <input type="text" id="prenom" required placeholder="Prénom" name="prenom" title="Inscrit ton prénom">
+                <label>Adresse E-mail *</label>
+                <input type="mail" id="mail" required>
+                <label for="">Service</label>
+                    <select>
+                        <option selected></option>
+                        <option>Comptabilité</option>
+                        <option>Ressources humaines</option>
+                        <option>Service informatique</option>
+                    </select>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Articles demandés</legend>
+
+                <label for="article">Nom de l'article</label>
+                <input type="text" id="article">
+                <label for="description">Description de l'article</label>
+                <textarea cols="65" rows="5" id="description" placeholder="description article"></textarea>
+                <label for="quantite">Quantité</label>
+                <input type="number" min="1" max="1000" step="1" id="quantite">
+                <label for="prix">Prix unitaire</label>
+                <input type="number" step="1" id="prix">
+                <label for="date">date de livraison souhaitée</label>
+                <input type="date" id="date">
+            </fieldset>
+
+            <fieldset>
+                <legend>Justification de la demande</legend>
+                <label for="justif">Expliquer votre nécessité pour l'achat</label>
+                <textarea cols="65" rows="5" id="justif" placeholder="votre texte"></textarea>
+            </fieldset>
+            <button type="submit" id="submit">Envoyer la demande</button>
+            <button type="reset">Annuler</button>
         </form>
 
     </main>
+    <aside id="result"></aside>
 
     <footer class="info">
         <h2>Informations Complémentaires</h2>
